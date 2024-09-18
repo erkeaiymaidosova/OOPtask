@@ -35,10 +35,17 @@ public class Book {
     }
 
     */
+    public void discount(double discount) {
+        if (discount > 0 && discount <= 100) {
+            this.price -= this.price * (discount / 100);
+        }
+        System.out.println("Price with discount:" + this.price);
+    }
     public void displayInfo(){
         System.out.println( "Book title: " + title);
         System.out.println( "Author of book: " + author);
         System.out.println( "ISBN: " + isbn );
         System.out.println( "Price: " + price);
     }
+
 }
